@@ -4,7 +4,7 @@
     "description": "",
     "main": "index.js",
     "scripts": {
-        "start": "concurrently -k --name \"server,client\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm start -C server\" \"cd client && npm start -- --progress=false\"",
+        "start": "concurrently -k --name \"server,client\" -c \"bgBlue.bold,bgMagenta.bold,bgGreen.bold\" \"npm start -C server\" \"cd ang-client && npm start -- --progress=false\"",
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
