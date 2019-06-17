@@ -19,8 +19,8 @@ export class AppComponent implements OnInit {
       this.apollo.watchQuery({
         query: BooksQuery
       }).valueChanges.subscribe((response) => {
-        const { data : { books }} = response;
-        this.books = books;
+        const { data } = response;
+        this.books = (data as any).books;
       });
   }
 }
