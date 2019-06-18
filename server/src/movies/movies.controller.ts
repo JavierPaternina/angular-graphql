@@ -1,10 +1,10 @@
 import { MovieApi } from './movies.service';
 
 const movieController = {
-    getMovieList: async(page) => {
-          return  await MovieApi.getPopular(page);;
+    getMovieList: async({ page }: any) => {
+        return  await MovieApi.getPopular(page);
     },
-    getMovieDetails: async(id) => {
+    getMovieDetails: async({ id }: any) => {
         return await MovieApi.getMovieDetail(id);
     }
 };

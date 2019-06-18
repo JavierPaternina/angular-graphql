@@ -2,9 +2,9 @@
   "name": "graphql-server",
   "version": "1.0.0",
   "description": "",
-  "main": "./src/server.js",
+  "main": "./src/server.ts",
   "scripts": {
-    "start": "nodemon ./src/server.js",
+    "start": "nodemon ./src/server.ts",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -13,15 +13,23 @@
   "dependencies": {
     "apollo-datasource-rest": "^0.5.0",
     "apollo-server": "^2.6.3",
+    "dotenv": "^8.0.0",
     "graphql": "^14.3.1"
   },
   "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/register": "^7.4.4",
+    "@types/dotenv": "6.1.1",
+    "@types/graphql": "14.2.1",
+    "@types/node": "12.0.8",
     "nodemon": "1.19.1",
     "prettier": "1.18.2",
     "ts-node": "8.3.0",
     "tslint": "5.17.0",
-    "typescript": "3.5.2",
-    "@types/dotenv": "6.1.1",
-    "@types/graphql": "14.2.1"
+    "typescript": "3.5.2"
+  },
+  "peerDependencies": {
+    "node-fetch": "2.6.0"
   }
 }
