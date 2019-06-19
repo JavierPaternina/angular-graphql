@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+import { SharedModule } from './shared/shared.module';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { GraphQLModule } from './graphql.config';
@@ -12,7 +13,8 @@ import { GraphQLModule } from './graphql.config';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    GraphQLModule
+    GraphQLModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]

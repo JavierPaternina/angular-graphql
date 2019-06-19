@@ -1,12 +1,16 @@
-<!--The content below is only a placeholder and can be replaced.-->
-<div style="text-align:center">
-  <h1>
-    {{ title }}!
-  </h1>
+<div class="app-container-layout">
+   <div class="app-container-layout__content">
+      <div class="app-container-layout__menu">
+            <app-header></app-header>
+      </div>
+      <div class="app-container-layout__side-bar">
+            <app-side-bar></app-side-bar>
+     </div>
+     <div class="app-container-layout__main-content">
+         <router-outlet></router-outlet>
+    </div>
+   </div>
+
+
 </div>
 
-<ul *ngFor="let book of books">
-  <li>{{book.title}}</li>
-  <li>{{book.author}}</li>
-</ul>
-<router-outlet></router-outlet>
