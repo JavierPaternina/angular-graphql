@@ -1,0 +1,25 @@
+%menu-content {
+
+   li{
+      text-decoration: none;
+      list-style: none;
+      a{
+         text-decoration: none;
+         color: #222121;
+         display: block;
+      }
+   }
+}
+.app-menu-container {
+   height: 100%;
+
+   &__menu-horizontal {
+      display: inline-flex;
+      @extend %menu-content;
+   }
+
+   &__menu-vertical {
+      display: flex;
+      @extend %menu-content;
+   }
+}

@@ -1,7 +1,3 @@
 <div>
-   side Bar
-      <ul *ngFor="let item of itemsSideBar">
-            <li >{{ item.name }}</li>
-      </ul>
-
-</div>
+      <app-menu [itemMenu]="itemsSideBar" [vertical]=true></app-menu>
+  </div>

@@ -1,0 +1,25 @@
+.app-container-layout{
+   display: flex;
+
+   &__content {
+      flex: 1 1;
+      display: flex;
+   }
+
+   &__side-bar {
+      height: 100vh;
+      flex: 0.2;
+      border-right:2px solid #ddd;
+   }
+
+   &__main-content {
+      flex: 1;
+
+   }
+
+   &__menu {
+      height: 70px;
+      border-bottom: 2px solid #ddd;
+   }
+
+}

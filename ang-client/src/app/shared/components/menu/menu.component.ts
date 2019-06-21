@@ -9,5 +9,7 @@ import { MenuItems } from '../../models/menu.model';
 export class MenuComponent {
 
   @Input() itemMenu: MenuItems[];
+  @Input() vertical: boolean;
+  @Input() horizontal: boolean;
 
 }
