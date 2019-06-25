@@ -2,7 +2,7 @@ import { RESTDataSource } from 'apollo-datasource-rest';
 import { API_KEY } from '../constant';
 
 class MoviesServices extends RESTDataSource {
-    constructor(config: any){
+    constructor(config: any) {
         super();
         this.initialize(config);
         this.baseURL = 'https://api.themoviedb.org/3/movie/'; 

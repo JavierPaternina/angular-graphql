@@ -8,7 +8,7 @@ import { SideBarComponent } from './components/side-bar/side-bar.component';
 import { MediaBoxComponent } from './components/media-box/media-box.component';
 @NgModule({
   imports: [CommonModule],
-  exports: [HeaderComponent, MenuComponent, SideBarComponent],
+  exports: [HeaderComponent, MenuComponent, SideBarComponent, MediaBoxComponent],
   declarations: [HeaderComponent, MenuComponent, SideBarComponent, MediaBoxComponent],
   providers: [],
 })

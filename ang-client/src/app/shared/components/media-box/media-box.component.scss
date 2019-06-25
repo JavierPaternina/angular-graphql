@@ -1,0 +1,27 @@
+@mixin titel-content-style ($font-size, $font-color) {
+   font-size: $font-size;
+   color: $font-color;
+   margin-left: 5px;
+   display: block;
+}
+.app-media-box {
+   height: 270px;
+   width: 200px;
+   padding: 3px;
+   margin: 25px 10px 0 10px;
+
+   &__image {
+      width: 90%;
+      height: 90%;
+      padding: 3px;
+      border: 1px solid #ccc;
+   }
+
+   &__title {
+      @include titel-content-style(12px,#090909);
+   }
+
+   &__sub-title {
+      @include titel-content-style(10px,#dddd);
+   }
+}

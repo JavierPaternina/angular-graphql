@@ -20,6 +20,7 @@ const movieType = gql`
         original_title:String
         overview:String
         popularity:Float
+        poster_path:String
         production_companies:[ProductionCompanies]
         status:String
         tagline:String
