@@ -26,7 +26,7 @@ export class HeaderComponent implements OnInit {
       },
       {
         name: 'Comics',
-        route: '/movies'
+        route: '/comics'
       }
    ];
   }
