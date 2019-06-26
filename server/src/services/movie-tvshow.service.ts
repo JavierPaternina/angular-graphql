@@ -1,11 +1,16 @@
 import { RESTDataSource } from 'apollo-datasource-rest';
-import { API_KEY } from '../constant';
+import { API_KEY, BASE_MOVIE_URL, BASE_SHOWS_URL } from '../constant';
 
-class MoviesServices extends RESTDataSource {
-    constructor(config: any) {
+class MovieShowsServices extends RESTDataSource {
+    URL: string;
+    constructor(movie: boolean, config: any = {}) {
         super();
         this.initialize(config);
-        this.baseURL = 'https://api.themoviedb.org/3/movie/'; 
+        this.URL = movie 
+            ? BASE_MOVIE_URL 
+            : BASE_SHOWS_URL; 
+
+        this.baseURL = this.URL;
     }
 
     async getPopular(page: number) {
@@ -18,7 +23,7 @@ class MoviesServices extends RESTDataSource {
         }
     }
 
-    async getMovieDetail(id: number) {
+    async getDetail(id: number) {
         try {
             const data = await this.get(
                 `${id}?api_key=${API_KEY}`);
@@ -29,5 +34,4 @@ class MoviesServices extends RESTDataSource {
         }
     }
 }
-const  MovieApi = new MoviesServices({});
-export { MovieApi };
+export { MovieShowsServices };

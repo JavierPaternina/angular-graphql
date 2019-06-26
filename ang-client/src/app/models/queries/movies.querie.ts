@@ -1,5 +1,5 @@
 import gql from 'graphql-tag';
-import { MovieList } from '../../models/types/movies';
+import { MovieList } from '../../models/types/movies.type';
 
 
 export const MovieListQuery = gql`

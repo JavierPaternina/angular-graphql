@@ -15,13 +15,15 @@ export class MoivesComponent implements OnInit {
   constructor(private apollo: Apollo) { }
 
   ngOnInit() {
-   this.movies = this.apollo.watchQuery({
-      query: MovieListQuery,
-      variables: {
-         page: 1
-      }
-   }).valueChanges.pipe(map(({data}: any ) => data.movieList.results ));
-
+      this.movies = this.apollo
+      .watchQuery({
+         query: MovieListQuery,
+         variables: {
+            page: 1
+         }
+      })
+      .valueChanges
+      .pipe(map(({data}: any ) => data.movieList.results ));
   }
 
 }

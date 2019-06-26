@@ -1,11 +1,13 @@
-import { MovieApi } from './movies.service';
+import { MovieShowsServices } from '../services/movie-tvshow.service';
+
+const movieService = new MovieShowsServices(true);
 
 const movieController = {
     getMovieList: async({ page }: any) => {
-        return  await MovieApi.getPopular(page);
+        return  await movieService.getPopular(page);
     },
     getMovieDetails: async({ id }: any) => {
-        return await MovieApi.getMovieDetail(id);
+        return await movieService.getDetail(id);
     }
 };
 
