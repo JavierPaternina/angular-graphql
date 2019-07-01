@@ -8,6 +8,7 @@
         "test": "echo \"Error: no test specified\" && exit 1"
     },
     "dependencies": {
+        "@playlyfe/gql": "^2.6.1",
         "concurrently": "4.1.0"
     },
     "keywords": [],

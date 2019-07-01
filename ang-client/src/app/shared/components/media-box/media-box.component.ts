@@ -1,4 +1,5 @@
 import { Component, OnInit, Input } from '@angular/core';
+import { MediaBoxModel } from './media-box.model';
 
 @Component({
   selector: 'app-media-box',
@@ -7,7 +8,7 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class MediaBoxComponent implements OnInit {
 
-@Input() movie: any;
+@Input() boxData: MediaBoxModel;
 constructor() { }
 
 ngOnInit() {
